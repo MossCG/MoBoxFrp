@@ -17,4 +17,10 @@ public class BasicInfo {
     //MossLib框架功能模块
     public static ObjectLogger logger;
     public static ObjectConfig config;
+
+    //Debug信息输出
+    public static boolean debug = false;
+    public static void sendDebug(String message) {
+        logger.sendAPI(message,debug);
+    }
 }

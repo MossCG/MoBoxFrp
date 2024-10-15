@@ -1,5 +1,7 @@
 package org.moboxlab.MoBoxFrp;
 
+import org.moboxlab.MoBoxFrp.Command.CommandDebug;
+import org.moboxlab.MoBoxFrp.Command.CommandExit;
 import org.moboxlab.MoBoxFrp.Info.InfoStart;
 import org.mossmc.mosscg.MossLib.Command.CommandManager;
 import org.mossmc.mosscg.MossLib.Config.ConfigManager;
@@ -20,10 +22,13 @@ public class Main {
         //启动消息组
         InfoStart.sendStartMessage();
         //配置文件初始化
+        BasicInfo.logger.sendInfo("正在读取配置文件......");
         BasicInfo.config = ConfigManager.getConfigObject("./MoBoxFrp", "config.yml", "config.yml");
 
         //命令行初始化
         CommandManager.initCommand(BasicInfo.logger,true);
+        CommandManager.registerCommand(new CommandExit());
+        CommandManager.registerCommand(new CommandDebug());
 
         //计时
         long completeTime = System.currentTimeMillis();
