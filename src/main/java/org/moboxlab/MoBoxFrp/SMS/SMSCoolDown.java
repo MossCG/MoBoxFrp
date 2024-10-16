@@ -6,7 +6,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class SMSCoolDown {
-    public static Map<String,Long> coolDownMap = new HashMap<>();
+    private static final Map<String,Long> coolDownMap = new HashMap<>();
 
     public static synchronized boolean checkCoolDown(String phone) {
         long next = System.currentTimeMillis()+BasicInfo.config.getInteger("SMSCoolDown")*1000L;
@@ -14,8 +14,8 @@ public class SMSCoolDown {
             coolDownMap.put(phone,next);
             return true;
         }
+        //系统时间比限制时间晚，才可以发
         if (System.currentTimeMillis()>coolDownMap.get(phone)) {
-            //系统时间比限制时间晚，可以发
             coolDownMap.replace(phone,next);
             return true;
         } else {

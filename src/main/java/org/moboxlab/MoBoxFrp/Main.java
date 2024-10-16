@@ -3,6 +3,7 @@ package org.moboxlab.MoBoxFrp;
 import org.moboxlab.MoBoxFrp.Command.CommandDebug;
 import org.moboxlab.MoBoxFrp.Command.CommandExit;
 import org.moboxlab.MoBoxFrp.Info.InfoStart;
+import org.moboxlab.MoBoxFrp.Mail.MailMain;
 import org.mossmc.mosscg.MossLib.Command.CommandManager;
 import org.mossmc.mosscg.MossLib.Config.ConfigManager;
 import org.mossmc.mosscg.MossLib.File.FileCheck;
@@ -24,6 +25,10 @@ public class Main {
         //配置文件初始化
         BasicInfo.logger.sendInfo("正在读取配置文件......");
         BasicInfo.config = ConfigManager.getConfigObject("./MoBoxFrp", "config.yml", "config.yml");
+
+        //邮箱模块初始化
+        BasicInfo.logger.sendInfo("正在初始化邮箱模块......");
+        MailMain.initMail();
 
         //命令行初始化
         CommandManager.initCommand(BasicInfo.logger,true);

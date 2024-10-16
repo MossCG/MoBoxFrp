@@ -2,9 +2,21 @@
 
 
 #----------------------------------
+#邮箱模块信息
+
+#邮箱开启设置
+enableMail: false
+#邮箱账号密码
+mailAccount: aaa@163.com
+mailPassword: 123456
+#邮箱SMTP地址端口
+mailSMTPHost: smtp.mossfrp.nb
+mailSMTPPort: 465
+
+#----------------------------------
 #短信模块信息
 
-#短信验证码功能用
+#短信验证码功能
 #基于阿里云SMS
 enableSMS: false
 #阿里云AccessKey信息
