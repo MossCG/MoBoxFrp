@@ -6,7 +6,7 @@
 
     <groupId>org.moboxlab</groupId>
     <artifactId>MoBoxFrp</artifactId>
-    <version>0.0.0.0.0000 Beta</version>
+    <version>1.0</version>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>

@@ -1,1 +1,22 @@
 #MoBoxFrp 主控配置文件
+
+
+#----------------------------------
+#短信模块信息
+
+#短信验证码功能用
+#基于阿里云SMS
+enableSMS: false
+#阿里云AccessKey信息
+AliyunAccessKeyID: "123"
+AliyunAccessKeySecret: "456"
+#短信信息
+SMSSignName: "墨盒软件"
+SMSTemplateCode: "SMS_123456789"
+#短信冷却（秒）
+SMSCoolDown: 60
+#验证码可用时长（分钟）
+SMSCodeTime: 5
+
+#----------------------------------
+
