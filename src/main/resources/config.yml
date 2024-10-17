@@ -12,6 +12,8 @@ mailPassword: 123456
 #邮箱SMTP地址端口
 mailSMTPHost: smtp.mossfrp.nb
 mailSMTPPort: 465
+#验证码可用时长（分钟）
+mailCodeTime: 5
 
 #----------------------------------
 #短信模块信息
