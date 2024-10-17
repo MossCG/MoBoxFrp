@@ -2,6 +2,7 @@ package org.moboxlab.MoBoxFrp;
 
 import org.moboxlab.MoBoxFrp.Command.CommandDebug;
 import org.moboxlab.MoBoxFrp.Command.CommandExit;
+import org.moboxlab.MoBoxFrp.Database.DatabaseMain;
 import org.moboxlab.MoBoxFrp.Info.InfoStart;
 import org.moboxlab.MoBoxFrp.Mail.MailMain;
 import org.mossmc.mosscg.MossLib.Command.CommandManager;
@@ -25,6 +26,10 @@ public class Main {
         //配置文件初始化
         BasicInfo.logger.sendInfo("正在读取配置文件......");
         BasicInfo.config = ConfigManager.getConfigObject("./MoBoxFrp", "config.yml", "config.yml");
+
+        //数据库模块初始化
+        BasicInfo.logger.sendInfo("正在连接至数据库......");
+        DatabaseMain.updateConnection(true);
 
         //邮箱模块初始化
         BasicInfo.logger.sendInfo("正在初始化邮箱模块......");

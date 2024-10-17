@@ -1,7 +1,9 @@
 package org.moboxlab.MoBoxFrp;
 
+import org.mossmc.mosscg.MossLib.Mysql.MysqlManager;
 import org.mossmc.mosscg.MossLib.Object.ObjectConfig;
 import org.mossmc.mosscg.MossLib.Object.ObjectLogger;
+import org.mossmc.mosscg.MossLib.SQLite.SQLiteManager;
 
 public class BasicInfo {
     //版本信息，请勿修改
@@ -23,6 +25,10 @@ public class BasicInfo {
     //MossLib框架功能模块
     public static ObjectLogger logger;
     public static ObjectConfig config;
+
+    //数据库模块
+    public static MysqlManager mysqlManager;
+    public static SQLiteManager sqLiteManager;
 
     //Debug信息输出
     public static boolean debug = false;

@@ -33,4 +33,23 @@ SMSCoolDown: 60
 SMSCodeTime: 5
 
 #----------------------------------
+#数据库设置
+
+#是否启用MySQL（不启用则为SQLite存储数据）
+#切换前请做好数据备份（或一开始就选好）
+#贸然切换可能导致数据丢失
+enableMySQL: false
+#MySQL设置（SQLite不用管这个）
+databaseAddress: "127.0.0.1"
+databasePort: "3306"
+databaseDatabase: "atb"
+databaseUser: "root"
+databasePassword: "password"
+#连接池大小（一般情况下3够用了）
+databasePoolSize: 3
+#数据库连接检查冷却（60s可供参考，太短会降低响应速度）
+databaseCheckCD: 60
+#数据库连接刷新冷却（300s可供参考，意味着每隔对应时长重新连接一次到数据库）
+databaseRefreshCD: 300
+#----------------------------------
 
