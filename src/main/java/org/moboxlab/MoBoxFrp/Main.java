@@ -5,6 +5,7 @@ import org.moboxlab.MoBoxFrp.Command.CommandExit;
 import org.moboxlab.MoBoxFrp.Database.DatabaseMain;
 import org.moboxlab.MoBoxFrp.Info.InfoStart;
 import org.moboxlab.MoBoxFrp.Mail.MailMain;
+import org.moboxlab.MoBoxFrp.User.UserPermission;
 import org.mossmc.mosscg.MossLib.Command.CommandManager;
 import org.mossmc.mosscg.MossLib.Config.ConfigManager;
 import org.mossmc.mosscg.MossLib.File.FileCheck;
@@ -30,6 +31,10 @@ public class Main {
         //数据库模块初始化
         BasicInfo.logger.sendInfo("正在连接至数据库......");
         DatabaseMain.updateConnection(true);
+
+        //用户模块初始化
+        BasicInfo.logger.sendInfo("正在初始化用户模块......");
+        UserPermission.initLevel();
 
         //邮箱模块初始化
         BasicInfo.logger.sendInfo("正在初始化邮箱模块......");

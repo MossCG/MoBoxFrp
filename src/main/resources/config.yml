@@ -1,5 +1,5 @@
 #MoBoxFrp 主控配置文件
-
+#By MossCG
 
 #----------------------------------
 #邮箱模块信息
@@ -42,9 +42,9 @@ enableMySQL: false
 #MySQL设置（SQLite不用管这个）
 databaseAddress: "127.0.0.1"
 databasePort: "3306"
-databaseDatabase: "atb"
+databaseDatabase: "moboxfrp"
 databaseUser: "root"
-databasePassword: "password"
+databasePassword: "123456"
 #连接池大小（一般情况下3够用了）
 databasePoolSize: 3
 #数据库连接检查冷却（60s可供参考，太短会降低响应速度）
