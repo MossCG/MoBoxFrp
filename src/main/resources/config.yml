@@ -51,5 +51,18 @@ databasePoolSize: 3
 databaseCheckCD: 60
 #数据库连接刷新冷却（300s可供参考，意味着每隔对应时长重新连接一次到数据库）
 databaseRefreshCD: 300
+
+#----------------------------------
+#WebAPI设置
+
+#WebAPI端口
+webPort: 5555
+#是否启用Https
+#Https证书请放置于“./MoBoxFrp”文件夹下
+#证书请使用jks格式，并重命名为web.jks
+webHttps: false
+#Https证书密码
+webHttpsAuth: "22332233"
+
 #----------------------------------
 
